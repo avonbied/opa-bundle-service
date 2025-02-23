@@ -1,0 +1,11 @@
+{
+	"compilerOptions": {
+		"moduleDetection": "force",
+		"moduleResolution": "bundler",
+		"module": "ESNext",
+		"resolveJsonModule": true,
+		"allowJs": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+	},
+}
