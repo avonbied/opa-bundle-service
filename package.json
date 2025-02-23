@@ -12,7 +12,7 @@
 		"test": "tsc --no-emit"
 	},
 	"devDependencies": {
-		"@types/node": "^20.8.10",
+		"@types/node": "^20.17.19",
 		"tsx": "^4.19.3",
 		"typescript": "^5.4.4"
 	},
