@@ -17,6 +17,5 @@ bundles[name] := bundle_settings if {
 }
 
 discovery := {
-	"bundles": bundles,
-	"default_decision": "localdata/httpauthz/allow"
+	"bundles": bundles
 }

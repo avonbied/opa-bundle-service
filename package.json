@@ -7,7 +7,7 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"start": "tsx src/main.ts",
+		"start": "tsx main.ts",
 		"build": "pkgroll",
 		"test": "tsc --no-emit"
 	},
