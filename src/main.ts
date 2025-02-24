@@ -16,20 +16,27 @@ const MIME_TYPES = {
 };
 
 http.createServer(async (request, result) => {
-	const REQ_URL = new URL(`${FULL_URL}/${request.url}`);
+	const REQ_URL = new URL(`${FULL_URL}${request.url}`);
+	console.log(`${request.method} HTTP/${request.httpVersion} ${request.url}`);
+	console.log(request.headers);
 
 	if (REQ_URL.pathname.startsWith(CONFIG.bundleRoot)) {
+		console.log("File Request")
 		const FILE = await getBundle(REQ_URL.pathname);
 		const STATUS = FILE.found ? 200 : 404;
-
-		result.writeHead(STATUS, { "Content-Type": MIME_TYPES.gzip });
+		result.writeHead(STATUS, {
+			"etag": "1.0.0",
+			"Content-Type": MIME_TYPES.gzip
+		});
 		FILE.stream?.pipe(result);
-		console.log(`${request.method} ${request.url} ${STATUS}`);
-
 	} else if (REQ_URL.pathname.startsWith(CONFIG.refreshRoot)) {
+		console.log("Refresh Request")
 		result.writeHead(500)
+	} else {
+		console.log("Bad Request")
+		result.writeHead(400)
 	}
-	result.writeHead(400)
+	console.log("End Request")
 }).listen(CONFIG.port);
 
 console.log(`Server running at ${FULL_URL}`);

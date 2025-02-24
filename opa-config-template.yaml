@@ -1,0 +1,11 @@
+services:
+  localdata:
+    # Can be overriden with --set "services.localdata.url=<URL>"
+    url: https://localhost:9090
+    response_header_timeout_seconds: 5
+
+discovery:
+  service: localdata
+  resource: /bundles/discovery.tar.gz
+  decision: localdata/discovery
+  persist: true
