@@ -1,0 +1,73 @@
+{"terraform": {
+	"format_version": "0.1",
+	"terraform_version": "1.0.0",
+	"planned_values": {
+	  "root_module": {
+		"resources": [
+		  {
+			"address": "aws_instance.example",
+			"mode": "managed",
+			"type": "aws_instance",
+			"name": "example",
+			"provider_name": "aws",
+			"schema_version": 1,
+			"values": {
+			  "ami": "ami-0c55b159cbfafe1f0",
+			  "instance_type": "t2.micro",
+			  "tags": {
+				"Name": "example-instance"
+			  }
+			}
+		  }
+		]
+	  }
+	},
+	"resource_changes": [
+	  {
+		"address": "aws_instance.example",
+		"mode": "managed",
+		"type": "aws_instance",
+		"name": "example",
+		"provider_name": "aws",
+		"change": {
+		  "actions": ["create"],
+		  "before": null,
+		  "after": {
+			"ami": "ami-0c55b159cbfafe1f0",
+			"instance_type": "t2.micro",
+			"tags": {
+			  "Name": "example-instance"
+			}
+		  }
+		}
+	  }
+	],
+	"configuration": {
+	  "root_module": {
+		"resources": [
+		  {
+			"address": "aws_instance.example",
+			"mode": "managed",
+			"type": "aws_instance",
+			"name": "example",
+			"provider_config_key": "aws",
+			"expressions": {
+			  "ami": {
+				"constant_value": "ami-0c55b159cbfafe1f0"
+			  },
+			  "instance_type": {
+				"constant_value": "t2.micro"
+			  },
+			  "tags": {
+				"constant_value": {
+				  "Name": "example-instance"
+				}
+			  }
+			},
+			"schema_version": 1
+		  }
+		]
+	  }
+	}
+  }
+}

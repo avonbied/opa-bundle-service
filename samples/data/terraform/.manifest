@@ -1,0 +1,4 @@
+{
+  "rego_version": 1,
+  "roots": ["terraform"]
+}

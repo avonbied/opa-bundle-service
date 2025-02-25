@@ -11,3 +11,4 @@ RUN	LATEST_VERSION=$(wget -O - "https://api.github.com/repos/open-policy-agent/c
 
 RUN curl -L -o /usr/local/bin/opa https://openpolicyagent.org/downloads/latest/opa_linux_amd64_static
 
+CMD [ "/bin/sh" ]
