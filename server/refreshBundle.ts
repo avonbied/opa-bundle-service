@@ -1,5 +1,4 @@
 import { exec } from "node:child_process";
-import fs from "node:fs";
 
 export async function refreshDiscovery() {
 	exec('which opa', (err, stdout, stderr) => {
