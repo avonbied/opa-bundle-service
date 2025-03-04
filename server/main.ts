@@ -1,6 +1,6 @@
 import http from "node:http";
 import { URL } from "node:url";
-import { getBundle } from "./retrieveBundle";
+import { getBundle } from "./getBundle";
 
 const CONFIG = {
 	bundleRoot: `${process.env.BUNDLE_PATH ?? '/bundles'}`,
